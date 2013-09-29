@@ -1,5 +1,8 @@
 <?php 
 include "config.php";
-for ($i = 10000000; $i < 50000000; $i++) {
 
-}
+$player = new Blackshot();
+$player->setID(15718425);
+$player->getData();
+$data = $player->parseData();
+print_r($data);

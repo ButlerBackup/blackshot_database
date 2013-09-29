@@ -1,4 +1,6 @@
 <?php 
+include "class/blackshot.php";
+
 function stribet($inputstr, $delimiterLeft, $delimiterRight) {
 	$posLeft = stripos($inputstr, $delimiterLeft) + strlen($delimiterLeft);
 	$posRight = stripos($inputstr, $delimiterRight, $posLeft);
