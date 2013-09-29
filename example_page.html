@@ -1,0 +1,421 @@
+<!-- 
+url : http://ingameweb.blackshotonline.com/UserInfo/BattleInfo.aspx?cid=15718425
+
+Images etc may not be shown when rendered using this HTML file, but all data retains in the file itself.
+
+-->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	BlackShot! - Combat Intelligence
+</title></head>
+<meta http-equiv="imagetoolbar" content="no">
+<link href="include/item.popup.css" type="text/css" rel="stylesheet">
+<style type="text/css">
+    #divInfoTab
+    {
+        padding-right: 0px;
+        padding-left: 0px;
+        scrollbar-face-color: #2a2b2b;
+        background: #242426 url(images/table.gif) no-repeat 0px 0px;
+        left: 32px;
+        padding-bottom: 0px;
+        margin: 0px;
+        font: 11pxgullim;
+        scrollbar-highlight-color: #2a2b2b;
+        overflow: auto;
+        width: 344px;
+        scrollbar-shadow-color: #2a2b2b;
+        scrollbar-3dlight-color: #373839;
+        scrollbar-arrow-color: #111111;
+        padding-top: 0px;
+        scrollbar-track-color: #373839;
+        scrollbar-darkshadow-color: #373839;
+        position: absolute;
+        top: 490px;
+        height: 130px;
+    }
+    .rxtable
+    {
+        margin-top: 3px;
+        font: 11px dotum;
+        width: 324px;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    .rxtable TH
+    {
+        font-weight: normal;
+        color: #8b8b8c;
+        height: 20px;
+    }
+    .rxtable TD
+    {
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-bottom: 0px;
+        color: #7a7a7b;
+        padding-top: 0px;
+        letter-spacing: 0px;
+        height: 22px;
+        border: solid 1px #434343;
+    }
+</style>
+
+<script src="include/blackshot.popup.js" type="text/javascript"> </script>
+
+<script src="include/Menu.js" type="text/javascript"> </script>
+
+<script type="text/javascript">
+    //<![CDATA[
+    function DisplayTeamPlayInfo(id) {
+        for (var i = 2; i <= 5; i++) {
+            ToggleTeamPlayInfoButton(i, false);
+        }
+        ToggleTeamPlayInfoButton(id, true);
+    }
+
+    function ToggleTeamPlayInfoButton(id, isSelected) {
+        document.getElementById('btn_tpi' + (id - 1)).src = 'images/tab_frame' + (id - 1) + '_' + (isSelected ? 'on' : 'off') + '.jpg';
+        document.getElementById('TeamPlayInfo' + id).style.display = isSelected ? 'block' : 'none';
+    }
+
+    function DisplayWeaponInfo(id) {
+        var shotFrame = document.getElementById('classframe');
+        if (id == '1') {
+            shotFrame.src = 'AccuracyRate.aspx';
+            ToggleWeaponButton('2', false);
+        }
+        else {
+            shotFrame.src = 'WeaponList.aspx';
+            ToggleWeaponButton('1', false);
+        }
+        ToggleWeaponButton(id, true);
+    }
+
+    function ToggleWeaponButton(id, isSelected) {
+        document.getElementById('btn_wi' + id).src = 'images/tab_class' + id + '_' + (isSelected ? 'on' : 'off') + '.jpg';
+    }
+    //]]>
+</script>
+
+<body>
+    <form name="form1" method="post" action="BattleInfo.aspx?cid=15718425" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+    <h1><span>BlackShot!</span></h1>
+    <h2><span>Character Information</span></h2>
+    <div class="infoPopup">
+        <!-- Main tab start -->
+        <ul class="tab_top">
+            <li>
+                <img alt="Battle Information" src="images/tab_info1_on.jpg"></li></ul>
+        <hr>
+        <!-- Main tab end -->
+        <ol class="tab_sub">
+            <li><a style="cursor: default">
+                <span id="char_name">MrsPepperPotts</span></a> </li>
+        </ol>
+        <hr>
+        <!-- Character Information Window -->
+        <div class="info_character">
+            <div class="in_face">
+                <img id="photo" onerror="this.src='images/temp_char1.jpg';" src="" style="height:90px;width:120px;border-width:0px;" />
+            </div>
+            <div class="in_exp">
+                <p class="in_exptxt">
+                    <span id="curr_exp">14,150</span>
+                    /
+                    <span id="exp_tnl">16,001</span></p>
+                <p class="in_fill">
+                    <img id="expbar" src="images/img_fill.jpg" style="height:5px;width:62.98%;border-width:0px;" />
+                </p>
+                <p class="in_fl">Current rank:
+                    <img id="curr_rank" src="images/ranking/06.gif" style="height:12px;width:12px;border-width:0px;" /></p>
+                <p class="in_fr">>Next rank:
+                    <img id="next_rank" src="images/ranking/07.gif" style="height:12px;width:12px;border-width:0px;" /></p>
+            </div>
+            <p class="in_char">
+                <span id="chartype">Vanessa</span></p>
+            <p class="in_nick">
+                <span id="ign">MrsPepperPotts</span></p>
+            <p class="in_class">
+                <img id="rank" src="images/ranking/06.gif" style="height:12px;width:12px;border-width:0px;" /></p>
+            <p class="in_clan">
+                <span id="clan">None</span></p>
+            <p class="in_rank">
+                <span id="gamerank">Not available</span> (Rank updated on:
+                <span id="rankupdate">- </span>)</p>
+            <p class="in_bp">
+                <span id="bp">13,806</span></p>
+            <div class="in_table">
+                <p>No. of kills<span id="killcount">840</span></p>
+                <p>Continuous kill no.<span id="contkillcount">54</span></p>
+                <p>No. of deaths<span id="deathcount">734</span></p>
+                <p>Total acc. damage<span id="accumu_damage">98,249</span></p>
+                <p>Kill rate<span id="killrate">53.37%</span></p>
+                <p>No. of head shots<span id="headshots">187</span></p>
+                <p>Total games played<span id="totalplay">65</span></p>
+                <p>Head shot rate<span id="headshot_rate">22.26%</span></p>
+                <p>SD mode played<span id="totalsdmode">7</span></p>
+                <p>Total shots fired<span id="totalshots">8,240</span></p>
+                <p>TFM mode played<span id="totaltfmmode">40</span></p>
+                <p>Total shots hit<span id="totalhitcount">2,287</span></p>
+                <p>BD mode played<span id="totalbdmode">0</span></p>
+                <p>Accuracy(Hit/shot)<span id="accuracy">27.75%</span></p>
+                <p>Total playing time<span id="totalplaytime">9h 14m </span></p>
+            </div>
+        </div>
+        <!-- Information Table -->
+        <div class="info_frame">
+            <p class="framebox"><a onfocus="_focus(this)" href="javascript:DisplayTeamPlayInfo(2);">
+                <img id="btn_tpi1" alt="Total team info" src="images/tab_frame1_on.jpg"></a>
+                <img alt="" src="images/img_sep.gif">
+                <a onfocus="_focus(this)" href="javascript:DisplayTeamPlayInfo(3);">
+                    <img id="btn_tpi2" alt="By map" src="images/tab_frame2_off.jpg"></a>
+                <img alt="" src="images/img_sep.gif">
+                <a onfocus="_focus(this)" href="javascript:DisplayTeamPlayInfo(4);">
+                    <img id="btn_tpi3" alt="By SD mode" src="images/tab_frame3_off.jpg"></a>
+                <img alt="" src="images/img_sep.gif">
+                <a onfocus="_focus(this)" href="javascript:DisplayTeamPlayInfo(5);">
+                    <img id="btn_tpi4" alt="By TFM mode" src="images/tab_frame4_off.jpg"></a> </p>
+        </div>
+        <!-- Information tabs -->
+        <div id="divInfoTab">
+            <!-- Team Info -->
+            <table class="rxtable" id="TeamPlayInfo2" style="display: block" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <th width="34%" style="border-right: solid 1px #434343;">No. of</th>
+                        <th width="33%" style="border-right: solid 1px #434343;">Red Team</th>
+                        <th width="33%">Blue Team </th>
+                    </tr>
+                    <tr>
+                        <td align="left">Kills</td>
+                        <td><span id="tr_killcount">296</span></td>
+                        <td><span id="tb_killcount">544</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Deaths</td>
+                        <td><span id="tr_deathcount">239</span></td>
+                        <td><span id="tb_deathcount">495</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Win</td>
+                        <td><span id="tr_wincount">12</span></td>
+                        <td><span id="tb_wincount">34</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Lose</td>
+                        <td><span id="tr_losecount">7</span></td>
+                        <td><span id="tb_losecount">12</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Games Played</td>
+                        <td><span id="tr_playcount">19</span></td>
+                        <td><span id="tb_playcount">46</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Map Info -->
+            <table class="rxtable" id="TeamPlayInfo3" style="display: none" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <th width="31%" style="border-right: solid 1px #434343;"></th>
+                        <th width="17%" style="border-right: solid 1px #434343;">Kills</th>
+                        <th width="17%" style="border-right: solid 1px #434343;">Deaths</th>
+                        <th width="15%" style="border-right: solid 1px #434343;">Kill Ratio</th>
+                        <th width="20%">Play Time</th>
+                    </tr>
+                    
+                        <tr>
+                            <td align="left"><span id="mapinfo_ctl00_mapname">Broken City I</span></td>
+                            <td><span id="mapinfo_ctl00_map_killcount">14</span></td>
+                            <td><span id="mapinfo_ctl00_map_deathcount">7</span></td>
+                            <td><span id="mapinfo_ctl00_map_killratio">66.67</span>%</td>
+                            <td><span id="mapinfo_ctl00_map_playtime">19</span> m</td>
+                        </tr>
+                        
+                        <tr>
+                            <td align="left"><span id="mapinfo_ctl01_mapname">Gallery</span></td>
+                            <td><span id="mapinfo_ctl01_map_killcount">0</span></td>
+                            <td><span id="mapinfo_ctl01_map_deathcount">0</span></td>
+                            <td><span id="mapinfo_ctl01_map_killratio">NaN</span>%</td>
+                            <td><span id="mapinfo_ctl01_map_playtime">0</span> m</td>
+                        </tr>
+                        
+                        <tr>
+                            <td align="left"><span id="mapinfo_ctl02_mapname">Hans Cargo II</span></td>
+                            <td><span id="mapinfo_ctl02_map_killcount">2</span></td>
+                            <td><span id="mapinfo_ctl02_map_deathcount">0</span></td>
+                            <td><span id="mapinfo_ctl02_map_killratio">100.00</span>%</td>
+                            <td><span id="mapinfo_ctl02_map_playtime">1</span> m</td>
+                        </tr>
+                        
+                        <tr>
+                            <td align="left"><span id="mapinfo_ctl03_mapname">Lost Temple</span></td>
+                            <td><span id="mapinfo_ctl03_map_killcount">328</span></td>
+                            <td><span id="mapinfo_ctl03_map_deathcount">205</span></td>
+                            <td><span id="mapinfo_ctl03_map_killratio">61.54</span>%</td>
+                            <td><span id="mapinfo_ctl03_map_playtime">120</span> m</td>
+                        </tr>
+                        
+                        <tr>
+                            <td align="left"><span id="mapinfo_ctl04_mapname">Office</span></td>
+                            <td><span id="mapinfo_ctl04_map_killcount">42</span></td>
+                            <td><span id="mapinfo_ctl04_map_deathcount">46</span></td>
+                            <td><span id="mapinfo_ctl04_map_killratio">47.73</span>%</td>
+                            <td><span id="mapinfo_ctl04_map_playtime">92</span> m</td>
+                        </tr>
+                        
+                        <tr>
+                            <td align="left"><span id="mapinfo_ctl05_mapname">Rooftop</span></td>
+                            <td><span id="mapinfo_ctl05_map_killcount">36</span></td>
+                            <td><span id="mapinfo_ctl05_map_deathcount">14</span></td>
+                            <td><span id="mapinfo_ctl05_map_killratio">72.00</span>%</td>
+                            <td><span id="mapinfo_ctl05_map_playtime">11</span> m</td>
+                        </tr>
+                        
+                        <tr>
+                            <td align="left"><span id="mapinfo_ctl06_mapname">Sand Storm I</span></td>
+                            <td><span id="mapinfo_ctl06_map_killcount">28</span></td>
+                            <td><span id="mapinfo_ctl06_map_deathcount">26</span></td>
+                            <td><span id="mapinfo_ctl06_map_killratio">51.85</span>%</td>
+                            <td><span id="mapinfo_ctl06_map_playtime">26</span> m</td>
+                        </tr>
+                        
+                        <tr>
+                            <td align="left"><span id="mapinfo_ctl07_mapname">The Hunting</span></td>
+                            <td><span id="mapinfo_ctl07_map_killcount">376</span></td>
+                            <td><span id="mapinfo_ctl07_map_deathcount">417</span></td>
+                            <td><span id="mapinfo_ctl07_map_killratio">47.41</span>%</td>
+                            <td><span id="mapinfo_ctl07_map_playtime">274</span> m</td>
+                        </tr>
+                        
+                        <tr>
+                            <td align="left"><span id="mapinfo_ctl08_mapname">Traning Camp</span></td>
+                            <td><span id="mapinfo_ctl08_map_killcount">14</span></td>
+                            <td><span id="mapinfo_ctl08_map_deathcount">19</span></td>
+                            <td><span id="mapinfo_ctl08_map_killratio">42.42</span>%</td>
+                            <td><span id="mapinfo_ctl08_map_playtime">8</span> m</td>
+                        </tr>
+                        
+                </tbody>
+            </table>
+            <!-- SD Mode Info -->
+            <table class="rxtable" id="TeamPlayInfo4" style="display: none" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <th width="34%" style="border-right: solid 1px #434343;"></th>
+                        <th width="33%" style="border-right: solid 1px #434343;">Red Team</th>
+                        <th width="33%">Blue Team</th>
+                    </tr>
+                    <tr>
+                        <td align="left">Kills</td>
+                        <td><span id="sdr_killcount">18</span></td>
+                        <td><span id="sdb_killcount">38</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Deaths</td>
+                        <td><span id="sdr_deathcount">25</span></td>
+                        <td><span id="sdb_deathcount">28</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Win</td>
+                        <td><span id="sdr_wincount">1</span></td>
+                        <td><span id="sdb_wincount">4</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Lose</td>
+                        <td><span id="sdr_losecount">1</span></td>
+                        <td><span id="sdb_losecount">1</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Games Played</td>
+                        <td><span id="sdr_playcount">2</span></td>
+                        <td><span id="sdb_playcount">5</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Bombs Planted</td>
+                        <td><span id="sdr_bombplanted">6</span></td>
+                        <td><span id="sdb_bombplanted">0</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Bombs Defused</td>
+                        <td><span id="sdr_bombdefused">0</span></td>
+                        <td><span id="sdb_bombdefused">3</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Bombs Fused</td>
+                        <td><span id="sdr_bombfused">0</span></td>
+                        <td><span id="sdb_bombfused">0</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- TFM Mode Info -->
+            <table class="rxtable" id="TeamPlayInfo5" style="display: none" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <th width="34%" style="border-right: solid 1px #434343;"></th>
+                        <th width="33%" style="border-right: solid 1px #434343;">Red Team</th>
+                        <th width="33%">Blue Team</th>
+                    </tr>
+                    <tr>
+                        <td align="left">Kills</td>
+                        <td><span id="fr_killcount">104</span></td>
+                        <td><span id="fb_killcount">300</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Deaths</td>
+                        <td><span id="fr_deathcount">106</span></td>
+                        <td><span id="fb_deathcount">337</span></td>
+                    </tr>
+                     <tr>
+                        <td align="left">Win</td>
+                        <td><span id="fr_wincount">5</span></td>
+                        <td><span id="fb_wincount">22</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Lose</td>
+                        <td><span id="fr_losecount">4</span></td>
+                        <td><span id="fb_losecount">9</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Games Played</td>
+                        <td><span id="fr_playcount">9</span></td>
+                        <td><span id="fb_playcount">31</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Flags Taken</td>
+                        <td><span id="fr_flagstaken">32</span></td>
+                        <td><span id="fb_flagstaken">129</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Flags Returned</td>
+                        <td><span id="fr_flagsreturn">3</span></td>
+                        <td><span id="fb_flagsreturn">20</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Flags Captured</td>
+                        <td><span id="fr_captured">8</span></td>
+                        <td><span id="fb_captured">59</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Body and Weapon Skill -->
+        <div class="info_class">
+            <ul class="tab_class">
+                <li><a onfocus="_focus(this)" href="javascript:DisplayWeaponInfo(1);">
+                    <img id="btn_wi1" alt="Shot rate on body parts" src="images/tab_class1_on.jpg"></a> </li>
+            </ul>
+            <iframe id="classframe" name="classframe" marginwidth="0" marginheight="0" src="AccuracyRate.aspx" frameborder="0" width="324" scrolling="no" height="498"></iframe>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
